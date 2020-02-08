@@ -1,12 +1,11 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 
 export default function Navigation() {
   return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">Furnitures</Navbar.Brand>
+    <Navbar bg="light" expand="md" sticky="top">
+      <Navbar.Brand href="#home">Furnitu.re</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
         <Nav>
