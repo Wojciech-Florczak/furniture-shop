@@ -11,28 +11,23 @@ export default function Featured() {
   return (
     <Container>
       <h2>Featured</h2>
-      <CardDeck>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-      </CardDeck>
-      <CardDeck>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-      </CardDeck>
-      {/* <Row>
-        <Col xl={2}></Col>
-        <Col xl={2}></Col>
-        <Col xl={2}></Col>
-        <Col xl={2}></Col>
-        <Col xl={2}></Col>
+      <Row>
+        <Col sm={6} md={3} xl={2}><ProductCard /></Col>
+        <Col sm={6} md={3} xl={2}><ProductCard /></Col>
+        <Col sm={6} md={3} xl={2}><ProductCard /></Col>
+        <Col sm={6} md={3} xl={2}><ProductCard /></Col>
+        <Col sm={6} md={3} xl={2}><ProductCard /></Col>
+        <Col sm={6} md={3} xl={2}><ProductCard /></Col>
+        <Col sm={6} md={3} xl={2}><ProductCard /></Col>
+        <Col sm={6} md={3} xl={2}><ProductCard /></Col>
+        <Col sm={6} md={3} xl={2}><ProductCard /></Col>
+        <Col sm={6} md={3} xl={2}><ProductCard /></Col>
+        <Col sm={6} md={3} xl={2}><ProductCard /></Col>
+        <Col sm={6} md={3} xl={2}><ProductCard /></Col>
+        <Col sm={6} md={3} xl={2}><ProductCard /></Col>
+        <Col sm={6} md={3} xl={2}><ProductCard /></Col>
       </Row>
-      <Row></Row> */}
+      <Row></Row>
     </Container>
   );
 }

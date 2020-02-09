@@ -8,25 +8,25 @@ export default function SmallProducts() {
   return (
     <Container>
       <Row>
-        <Col lg={3}>
+        <Col sm={6} lg={3}>
           <h3>Hot Sale</h3>
           <ProductSmall />
           <ProductSmall />
           <ProductSmall />
         </Col>
-        <Col lg={3}>
+        <Col sm={6} lg={3}>
           <h3>New Collection</h3>
           <ProductSmall />
           <ProductSmall />
           <ProductSmall />
         </Col>
-        <Col lg={3}>
+        <Col sm={6} lg={3}>
           <h3>Top Rated</h3>
           <ProductSmall />
           <ProductSmall />
           <ProductSmall />
         </Col>
-        <Col lg={3}>
+        <Col sm={6} lg={3}>
           <h3>Unavailable soon</h3>
           <ProductSmall />
           <ProductSmall />

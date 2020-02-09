@@ -8,21 +8,21 @@ export default function Showcase() {
   return (
     <Container>
       <Row >
-        <Col>
-          <Image src="https://via.placeholder.com/250" fluid className="p-1" style={{height: "100%"}} />
+        <Col md={6} lg={4}>
+          <Image src="https://via.placeholder.com/250" fluid className="p-1 w-100 h-100" />
         </Col>
-        <Col>
-          <Row>
-            <Col xl={12}>
-              <Image src="https://via.placeholder.com/250x150" fluid className="p-1" style={{width: "100%"}} />
+        <Col md={{span: 12, order: 1}} lg={{span: 4, order: 0}}>
+          <Row >
+            <Col md={6} lg={12}>
+              <Image src="https://via.placeholder.com/250x150" fluid className="p-1 w-100 h-100"/>
             </Col>
-            <Col xl={12}>
-              <Image src="https://via.placeholder.com/250x150" fluid className="p-1" style={{width: "100%"}}  />
+            <Col md={6} lg={12}>
+              <Image src="https://via.placeholder.com/250x150" fluid className="p-1 w-100 h-100" />
             </Col>
           </Row>
         </Col>
-        <Col>
-          <Image src="https://via.placeholder.com/250" fluid className="p-1" style={{height: "100%"}} />
+        <Col md={{span: 6}} lg={{span: 4}}>
+          <Image src="https://via.placeholder.com/250" fluid className="p-1 w-100 h-100" />
         </Col>
       </Row>
     </Container>

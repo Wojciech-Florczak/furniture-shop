@@ -19,7 +19,7 @@ export default function Footer() {
   return (
     <Container>
       <Row>
-        <Col xl={3}>
+        <Col md={6} xl={3}>
           <h2>Logo</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -28,7 +28,7 @@ export default function Footer() {
             cumque deserunt aspernatur commodi!
           </p>
         </Col>
-        <Col xl={3}>
+        <Col md={6} xl={3}>
           <h5>Twitter</h5>
           <ul>
             <li>
@@ -45,11 +45,12 @@ export default function Footer() {
             </li>
           </ul>
         </Col>
-        <Col xl={3}>
+        <Col md={6} xl={3}>
           <h5>Product Tags</h5>
           {tagsList.map(tag => {
             return (
               <Badge
+                key={tag}
                 variant="secondary"
                 pill
                 className="m-1 text-capitalize"
@@ -60,7 +61,7 @@ export default function Footer() {
             );
           })}
         </Col>
-        <Col xl={3}>
+        <Col md={6} xl={3}>
           <h5>Information</h5>
           <ul>
             <li>
