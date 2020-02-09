@@ -1,9 +1,37 @@
 import React from "react";
+import { createUseStyles } from "react-jss";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Badge from "react-bootstrap/Badge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+const useStyles = createUseStyles({
+  twitterList: {
+    listStyle: "none",
+    paddingLeft: 0,
+    "& li": {
+      display: "flex"
+    }
+  },
+  contactList: {
+    listStyle: "none",
+    paddingLeft: 0,
+    "& li": {
+      display: "flex",
+      justifyContent: "flex-end"
+    }
+  },
+  socialList: {
+    listStyle: "none",
+    paddingLeft: 0,
+    display: "flex",
+    "& li": {
+      marginRight: 10,
+      fontSize: "1.2rem"
+    }
+  }
+});
 
 const tagsList = [
   "wood",
@@ -17,32 +45,69 @@ const tagsList = [
 ];
 
 export default function Footer() {
+  const classes = useStyles();
   return (
     <Container>
       <Row>
         <Col md={6} xl={3}>
-          <h2>Logo</h2>
+          <h2>Furnitu.re</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit nisi velit iure adipisci consequatur laborum dolorum
-            accusamus magni voluptates a facere rem deleniti nam, ipsa dolorem
-            cumque deserunt aspernatur commodi!
+            Reprehenderit nisi velit iure adipisci consequatur laborum dolorum.
           </p>
+          <ul className={classes.socialList}>
+            <li>
+              <a href="#home">
+                <FontAwesomeIcon icon={["fab", "twitter"]} />
+              </a>
+            </li>
+            <li>
+              <a href="#home">
+                <FontAwesomeIcon icon={["fab", "facebook"]} />
+              </a>
+            </li>
+            <li>
+              <a href="#home">
+                <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
+              </a>
+            </li>
+            <li>
+              <a href="#home">
+                <FontAwesomeIcon icon={["fab", "youtube"]} />
+              </a>
+            </li>
+            <li>
+              <a href="#home">
+                <FontAwesomeIcon icon={["fab", "google-plus"]} />
+              </a>
+            </li>
+            <li>
+              <a href="#home">
+                <FontAwesomeIcon icon={["fab", "whatsapp"]} />
+              </a>
+            </li>
+          </ul>
         </Col>
         <Col md={6} xl={3}>
           <h5>Twitter</h5>
-          <ul>
+          <ul className={classes.twitterList}>
             <li>
-              <FontAwesomeIcon icon={["fab", "twitter"]} />
-              <p className="text-right">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              </p>
+              <FontAwesomeIcon icon={["fab", "twitter"]} className="mr-3" />
+              <div>
+                <p className="mb-0">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </p>
+                <a href="#home">https://t.co/mrKNJ9nEDt</a>
+              </div>
             </li>
             <li>
-              <FontAwesomeIcon icon={["fab", "twitter"]} />
-              <p className="text-right">
-                Tempore aspernatur veniam autem quidem exercitationem commodi.
-              </p>
+              <FontAwesomeIcon icon={["fab", "twitter"]} className="mr-3" />
+              <div>
+                <p className="mb-0">
+                  Tempore aspernatur veniam autem quidem exercitationem commodi.
+                </p>
+                <a href="#home">https://t.co/vrelK4nEDt</a>
+              </div>
             </li>
           </ul>
         </Col>
@@ -64,22 +129,22 @@ export default function Footer() {
         </Col>
         <Col md={6} xl={3}>
           <h5>Information</h5>
-          <ul>
+          <ul className={classes.contactList}>
             <li>
               <p className="text-right">
                 90 Cambridge Road, YO6 9SN
                 <br />
                 Normanby
               </p>
-              <span>icon</span>
+              <FontAwesomeIcon icon="map-marker-alt" className="ml-3" />
             </li>
             <li>
               <p className="text-right">+1(555) 489 23 11</p>
-              <span>icon</span>
+              <FontAwesomeIcon icon="phone" className="ml-3" />
             </li>
             <li>
               <p className="text-right">info@furnitu.re</p>
-              <span>icon</span>
+              <FontAwesomeIcon icon="envelope" className="ml-3" />
             </li>
           </ul>
         </Col>

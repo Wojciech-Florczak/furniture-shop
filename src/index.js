@@ -13,7 +13,8 @@ import {
   faShoppingCart,
   faMapMarkerAlt,
   faPhone,
-  faEnvelope
+  faEnvelope,
+  faExternalLinkAlt
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faCcVisa,
@@ -31,6 +32,7 @@ import {
 
 library.add(
   faSearch,
+  faExternalLinkAlt,
   faHeart,
   faShoppingCart,
   faMapMarkerAlt,

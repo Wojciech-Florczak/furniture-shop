@@ -14,7 +14,7 @@ export default function Bestsellers() {
       <Row>
         {slicedList.map(product => {
           return (
-            <Col md={6} lg={3}>
+            <Col md={6} lg={3} key={product.name}>
               <ProductCard data={product}/>
             </Col>
           );
