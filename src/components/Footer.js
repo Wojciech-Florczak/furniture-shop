@@ -3,6 +3,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Badge from "react-bootstrap/Badge";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const tagsList = [
   "wood",
@@ -32,13 +33,13 @@ export default function Footer() {
           <h5>Twitter</h5>
           <ul>
             <li>
-              <span>icon</span>
+              <FontAwesomeIcon icon={["fab", "twitter"]} />
               <p className="text-right">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               </p>
             </li>
             <li>
-              <span>icon</span>
+              <FontAwesomeIcon icon={["fab", "twitter"]} />
               <p className="text-right">
                 Tempore aspernatur veniam autem quidem exercitationem commodi.
               </p>
