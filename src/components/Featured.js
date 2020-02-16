@@ -23,9 +23,13 @@ export default function Featured() {
   const classes = useStyles();
 
   function CustomArrow(props) {
-    const { className, onClick } = props;
+    const { className, onClick, style } = props;
     return (
-      <div className={`${className} ${classes.arrow}`} onClick={onClick} />
+      <div
+        className={`${className} ${classes.arrow}`}
+        style={{ ...style }}
+        onClick={onClick}
+      />
     );
   }
   const settings = {
@@ -43,13 +47,13 @@ export default function Featured() {
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 3
         }
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 2
         }
       },
       {
@@ -60,7 +64,6 @@ export default function Featured() {
         }
       }
     ]
-
   };
 
   return (
@@ -69,7 +72,7 @@ export default function Featured() {
       <Slider {...settings}>
         {featuredList.map(product => {
           return (
-            <div key={product.id} className="p-2">
+            <div key={product.id} className="p-1">
               <ProductCard data={product} />
             </div>
           );
