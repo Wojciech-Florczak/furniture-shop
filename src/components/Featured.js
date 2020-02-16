@@ -1,26 +1,80 @@
 import React from "react";
+import Slider from "react-slick";
 import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import ProductCard from "./ProductCard";
 import productsList from "../db.json";
+import { createUseStyles } from "react-jss";
 
-const slicedList = productsList.slice(0, 12);
+const featuredList = productsList.slice(0, 12);
+
+const useStyles = createUseStyles({
+  arrow: {
+    width: "auto",
+    height: "auto",
+    "&:before": {
+      color: "rgba(0,0,0,0.3)",
+      fontSize: "2rem",
+      margin: "-20px"
+    }
+  }
+});
 
 export default function Featured() {
+  const classes = useStyles();
+
+  function CustomArrow(props) {
+    const { className, onClick } = props;
+    return (
+      <div className={`${className} ${classes.arrow}`} onClick={onClick} />
+    );
+  }
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 4,
+    speed: 500,
+    rows: 2,
+    slidesPerRow: 1,
+    nextArrow: <CustomArrow />,
+    prevArrow: <CustomArrow />,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          arrows: false
+        }
+      }
+    ]
+
+  };
+
   return (
     <Container>
       <h2>Featured</h2>
-      <Row>
-        {slicedList.map(product => {
+      <Slider {...settings}>
+        {featuredList.map(product => {
           return (
-            <Col sm={6} md={3} xl={2} key={product.id} className="mb-2">
+            <div key={product.id} className="p-2">
               <ProductCard data={product} />
-            </Col>
+            </div>
           );
         })}
-      </Row>
-      <Row></Row>
+      </Slider>
     </Container>
   );
 }

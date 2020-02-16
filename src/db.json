@@ -159,5 +159,12 @@
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209793/E-comm/Table_4.H03.2k_kn8xmu.png",
     "description": "Eu cupidatat eu ipsum amet magna eiusmod id. Aliquip ullamco sunt qui ea ex. Ut anim nostrud consectetur dolor. Ullamco fugiat magna esse exercitation nulla aute in. Duis ad reprehenderit cupidatat anim non exercitation incididunt ut reprehenderit esse.",
     "price": 49
+  },
+  {
+    "id": 24,
+    "name": "Even Older Table",
+    "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209793/E-comm/Table_4.H03.2k_kn8xmu.png",
+    "description": "Ullamco sunt qui ea ex. Ut anim nostrud consectetur dolor. Commodo esse amet ullamco commodo in magna excepteur Ullamco fugiat magna esse exercitation nulla aute in. Duis ad reprehenderit cupidatat anim non exercitation incididunt ut reprehenderit esse.",
+    "price": 39
   }
 ]

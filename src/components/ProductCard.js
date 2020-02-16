@@ -49,7 +49,7 @@ export default function ProductCard({ data }) {
       <Card.Img variant="top" src={image} />
       <Card.Body className="p-1 d-flex justify-content-between flex-column">
         <Card.Title className={classes.title}>{name}</Card.Title>
-        <Card.Text className={classes.price}>{price} $</Card.Text>
+        <Card.Text className={classes.price}>${price},00</Card.Text>
       </Card.Body>
       <div className={classes.buttonsWrapper}>
         <div>

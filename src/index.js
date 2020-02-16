@@ -14,7 +14,7 @@ import {
   faMapMarkerAlt,
   faPhone,
   faEnvelope,
-  faExternalLinkAlt
+  faExternalLinkAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faCcVisa,

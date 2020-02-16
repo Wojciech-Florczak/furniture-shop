@@ -4,9 +4,10 @@ import Image from "react-bootstrap/Image";
 import { createUseStyles } from "react-jss";
 
 const settings = {
-  dots: true,
   infinite: true,
-  // autoplay: true,
+  arrows: false,
+  fade: true,
+  autoplay: true,
   autoplaySpeed: 2000,
   speed: 800,
   slidesToShow: 1,
@@ -42,7 +43,7 @@ export default function SimpleSlider() {
       <div>
         <Image src="https://res.cloudinary.com/voytekcloud/image/upload/v1581209792/E-comm/slider-1_daythj.jpg" />
         <div className={classes.intro}>
-          <h2>Best furnitures in Poland</h2>
+          <h2>Best Furniture in Poland</h2>
         </div>
         <div className={classes.overlay}></div>
       </div>
