@@ -30,6 +30,10 @@ const useStyles = createUseStyles({
       marginRight: 10,
       fontSize: "1.2rem"
     }
+  },
+  ccIcons: {
+    // fontSize: "1.7rem",
+    margin: ".25rem",
   }
 });
 
@@ -149,7 +153,19 @@ export default function Footer() {
           </ul>
         </Col>
       </Row>
-      <Row></Row>
+      <Row>
+        <Col sm={6} xs={12}>
+          <span>© Furnitu.re {new Date().getFullYear()}</span>
+          <span> - All rights Reserved</span>
+        </Col>
+        <Col sm={6} xs={12} className="d-flex justify-content-end">
+          <FontAwesomeIcon className={classes.ccIcons} size="2x" icon={["fab", "cc-mastercard"]} />
+          <FontAwesomeIcon className={classes.ccIcons} size="2x" icon={["fab", "cc-visa"]} />
+          <FontAwesomeIcon className={classes.ccIcons} size="2x" icon={["fab", "cc-paypal"]} />
+          <FontAwesomeIcon className={classes.ccIcons} size="2x" icon={["fab", "cc-amazon-pay"]} />
+          <FontAwesomeIcon className={classes.ccIcons} size="2x" icon={["fab", "cc-apple-pay"]} />
+        </Col>
+      </Row>
     </Container>
   );
 }
