@@ -2,6 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import { createUseStyles } from "react-jss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 const useStyles = createUseStyles({
   title: {
@@ -42,7 +43,7 @@ const useStyles = createUseStyles({
 });
 
 export default function ProductCard({ data }) {
-  const { name, price, image } = data;
+  const { name, price, image, id } = data;
   const classes = useStyles();
   return (
     <Card className="h-100">
@@ -52,17 +53,17 @@ export default function ProductCard({ data }) {
         <Card.Text className={classes.price}>${price},00</Card.Text>
       </Card.Body>
       <div className={classes.buttonsWrapper}>
-        <div>
+        <button>
           <FontAwesomeIcon icon="shopping-cart" className="mr-1" />
           <span>Add to Cart</span>
-        </div>
+        </button>
         <div>
           <FontAwesomeIcon icon="heart" />
         </div>
         <div>
-          <a href="#product">
+          <Link to={`/product/${id}`}>
             <FontAwesomeIcon icon="external-link-alt" />
-          </a>
+          </Link>
         </div>
       </div>
     </Card>
