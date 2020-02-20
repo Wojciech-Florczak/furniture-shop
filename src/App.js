@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import ProductShow from "./pages/ProductShow";
 import ScrollToTop from "./components/ScrollToTop";
 import ProductAll from "./pages/ProductAll";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -13,9 +14,8 @@ function App() {
       <ScrollToTop />
       <Navigation />
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
+        <Route exact path="/" render={() => <Home />} />
+        <Route path="/about" render={() => <About />} />
         <Route exact path="/product" render={() => <ProductAll />} />
         <Route
           path="/product/:id"
