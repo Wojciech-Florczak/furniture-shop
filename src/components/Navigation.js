@@ -15,7 +15,7 @@ export default function Navigation() {
             <NavLink className="nav-link" exact to="/">Home</NavLink>
           </Nav.Item>
           <Nav.Item>
-            <NavLink className="nav-link" to="/product">Products</NavLink>
+            <NavLink className="nav-link" exact to="/product">Products</NavLink>
           </Nav.Item>
           <Nav.Item>
             <NavLink className="nav-link" to="/about">About</NavLink>

@@ -58,7 +58,7 @@ export default function SimpleSlider(props) {
     <Slider {...settings}>
       {props.config.map(slide => {
         return (
-          <div className={classes.contentWrapper}>
+          <div key={slide.id} className={classes.contentWrapper}>
             <div className={classes.imageWrapper}>
               <Image src={slide.img} className={classes.image} />
             </div>

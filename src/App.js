@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ProductShow from "./pages/ProductShow";
 import ScrollToTop from "./components/ScrollToTop";
-import ProductAll from "./components/ProductAll";
+import ProductAll from "./pages/ProductAll";
 
 function App() {
   return (
