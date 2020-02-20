@@ -8,9 +8,11 @@ const settings = {
   arrows: false,
   fade: true,
   autoplay: true,
-  autoplaySpeed: 2000,
-  speed: 800,
+  autoplaySpeed: 5000,
+  speed: 1400,
   slidesToShow: 1,
+  swipe: false,
+  pauseOnHover: false,
   slidesToScroll: 1
 };
 
@@ -33,26 +35,40 @@ const useStyles = createUseStyles({
     "& h2": {
       fontSize: "3rem"
     }
+  },
+  imageWrapper: {
+    width: "100%",
+    height: "100%",
+    position: "relative"
+  },
+  contentWrapper: {
+    height: 600
+  },
+  image: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)"
   }
 });
 
-export default function SimpleSlider() {
+export default function SimpleSlider(props) {
   const classes = useStyles();
   return (
     <Slider {...settings}>
-      <div>
-        <Image src="https://res.cloudinary.com/voytekcloud/image/upload/v1581209792/E-comm/slider-1_daythj.jpg" />
-        <div className={classes.intro}>
-          <h2>Best Furniture in Poland</h2>
-        </div>
-        <div className={classes.overlay}></div>
-      </div>
-      <div>
-        <Image src="https://res.cloudinary.com/voytekcloud/image/upload/v1581209792/E-comm/slider-2_pkgydk.jpg" />
-      </div>
-      <div>
-        <Image src="https://res.cloudinary.com/voytekcloud/image/upload/v1581209792/E-comm/slider-3_nectwu.jpg" />
-      </div>
+      {props.config.map(slide => {
+        return (
+          <div className={classes.contentWrapper}>
+            <div className={classes.imageWrapper}>
+              <Image src={slide.img} className={classes.image} />
+            </div>
+            <div className={classes.intro}>
+              <h2>{slide.text}</h2>
+            </div>
+            <div className={classes.overlay}></div>
+          </div>
+        );
+      })}
     </Slider>
   );
 }
