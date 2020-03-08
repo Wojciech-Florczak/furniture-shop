@@ -3,10 +3,10 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
-import productsList from "../db.json";
-import shuffleArray from "../helpers/shuffle";
+import productsList from "../../db.json";
+import shuffleArray from "../../helpers/shuffle";
 import { createUseStyles } from "react-jss";
-import DiscountBadge from "./DiscountBadge.js";
+import DiscountBadge from "../common/DiscountBadge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const useStyles = createUseStyles({

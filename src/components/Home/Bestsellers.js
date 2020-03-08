@@ -1,8 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import ProductCard from "./ProductCard";
+import ProductCard from "../common/ProductCard";
 import Container from "react-bootstrap/Container";
-import productsList from "../db.json";
+import productsList from "../../db.json";
 import { createUseStyles } from "react-jss";
 
 const bestsellersList = productsList.slice(13, 19);

@@ -4,167 +4,239 @@
     "name": "Black Woodwork Chest",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209790/E-comm/Black_Creative_Woodwork_Chest_Cabinet.H03.2k_iwwftj.png",
     "description": "Esse amet occaecat exercitation exercitation magna reprehenderit ad aliquip. Magna duis est ipsum eu enim aute. Do dolore aliquip incididunt enim adipisicing officia laborum cillum incididunt reprehenderit quis ad in.",
-    "price": 500
+    "price": 500.99,
+    "quantity": 10,
+    "category": "chests",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 2,
     "name": "Desk Set Modern",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209790/E-comm/Desk_Set.H03.2k_xbdfsn.png",
     "description": "Fugiat in veniam Lorem proident nulla. Aliqua sint aliqua laboris Lorem in incididunt minim veniam Lorem reprehenderit irure ad sit. Velit culpa mollit ad occaecat magna ex magna nulla reprehenderit commodo ullamco sint. Ea qui sunt adipisicing enim fugiat amet velit eiusmod ut nulla pariatur aliqua cillum velit. Consequat reprehenderit officia nostrud nulla ad irure tempor culpa pariatur.",
-    "price": 300
+    "price": 300.99,
+    "quantity": 10,
+    "category": "desks",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 3,
     "name": "Regular Desk",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209790/E-comm/Desk.H03.2k_o3xwcr.png",
     "description": "Proident dolore ipsum ullamco id enim proident dolor aliqua tempor. Veniam velit aliquip aute consectetur sit ut Lorem commodo. Exercitation irure ipsum consectetur fugiat culpa in cillum aliqua cillum amet voluptate.",
-    "price": 150
+    "price": 150.99,
+    "quantity": 10,
+    "category": "desks",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 4,
     "name": "Armchair Comfort",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209790/E-comm/Armchair.H03.2k_vigvww.png",
     "description": "Sit in duis consequat veniam. Enim eiusmod non ex esse incididunt duis ea aute irure consectetur voluptate proident enim dolor. Ad consequat sit reprehenderit pariatur. Quis adipisicing nulla nulla velit cupidatat occaecat.",
-    "price": 80
+    "price": 80.99,
+    "quantity": 10,
+    "category": "chairs",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 5,
     "name": "Child Desk Set",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209790/E-comm/Desk_Set_2.H03.2k_tzdxjx.png",
     "description": "Ad dolore sunt voluptate ullamco id elit cupidatat esse esse. Ex excepteur ipsum aute ut laboris laboris ea voluptate ea anim nostrud. Reprehenderit voluptate et ex aliquip aliquip fugiat amet reprehenderit excepteur. Amet ea aute laboris aliquip do nostrud enim anim dolor non commodo non eiusmod aute. Culpa qui Lorem in ea. Do deserunt deserunt veniam tempor magna magna duis excepteur tempor. Ea labore voluptate enim pariatur qui anim.",
-    "price": 200
+    "price": 200.99,
+    "quantity": 10,
+    "category": "desks",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 6,
     "name": "Chest of Drawers",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209790/E-comm/Chest_of_Drawers_Dark.H03.2k_vtgfrf.png",
     "description": "Dolore qui id in eiusmod. Amet est veniam pariatur deserunt tempor non magna eiusmod eiusmod. Veniam duis eu cupidatat non Lorem minim commodo laborum duis ea ex ipsum ipsum tempor. Labore deserunt et laborum enim eiusmod magna ut amet reprehenderit duis proident. Ullamco anim officia aliquip deserunt minim velit laboris magna commodo consectetur est. Fugiat id eu labore officia aliquip cupidatat anim. Nulla consectetur ex pariatur sint qui voluptate labore fugiat dolore magna ea eu irure ipsum.",
-    "price": 169
+    "price": 169.99,
+    "quantity": 10,
+    "category": "chests",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 7,
     "name": "Oldschool Floor Lamp",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209790/E-comm/Floor_Lamp.H03.2k_iscvve.png",
     "description": "Deserunt et culpa labore do tempor cupidatat sint tempor esse. Duis amet deserunt aliquip qui nulla incididunt. Aliquip reprehenderit exercitation tempor quis proident id quis. Excepteur laboris cupidatat sint nostrud excepteur et excepteur reprehenderit proident laboris est aliqua mollit. Ullamco anim ea proident mollit nostrud fugiat eiusmod ullamco qui voluptate. Tempor minim amet esse eiusmod consectetur dolor elit sit voluptate commodo sint.",
-    "price": 29
+    "price": 29.99,
+    "quantity": 10,
+    "category": "lamps",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 8,
     "name": "Desk Lamp",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209790/E-comm/Lamp.H03.2k_zubayk.png",
     "description": "Adipisicing non est ullamco nostrud magna magna quis incididunt. Nulla exercitation nostrud labore nisi commodo aute reprehenderit consequat. Ad incididunt cillum occaecat duis deserunt adipisicing et laborum. Officia exercitation veniam amet consequat magna adipisicing eiusmod consectetur.",
-    "price": 15
+    "price": 15.99,
+    "quantity": 10,
+    "category": "desks",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 9,
     "name": "Modern Floor Lamp",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209790/E-comm/Floor_Lamp_2.H03.2k_nnz5li.png",
     "description": "Aliqua nostrud nisi laboris duis officia cupidatat in consectetur culpa ad. Esse esse enim sint incididunt nostrud. Reprehenderit cupidatat ipsum consectetur adipisicing id ipsum tempor non proident.",
-    "price": 40
+    "price": 40.99,
+    "quantity": 10,
+    "category": "lamps",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 10,
     "name": "Dresser",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209791/E-comm/Dresser.H03.2k_qs6dan.png",
     "description": "Minim fugiat aute excepteur exercitation esse excepteur consequat eu in cupidatat quis. Eu in ad proident ea officia sit culpa adipisicing. Est amet id Lorem incididunt excepteur. Ea nostrud nulla aute minim enim culpa ipsum esse commodo labore ullamco aute eiusmod eu. Labore officia labore incididunt laboris aliqua qui culpa ut elit veniam non excepteur commodo qui. Laboris officia aute officia ad mollit. Cillum esse officia nostrud minim ipsum et est excepteur cillum sit laborum.",
-    "price": 100
+    "price": 100.99,
+    "quantity": 10,
+    "category": "chests",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 11,
     "name": "Medical Lamp",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209791/E-comm/Medical_Lamp.H03.2k_rsxede.png",
     "description": "Ut do adipisicing irure do voluptate. Consequat irure labore eiusmod exercitation culpa qui sint deserunt. Sit proident dolor anim non ea proident veniam cillum labore. Eu sit ex consectetur nostrud aliquip adipisicing laboris adipisicing dolore et proident dolore pariatur. Nisi nisi eu proident duis. Excepteur nisi quis commodo irure quis anim et id nostrud duis excepteur incididunt. Id eiusmod mollit sint proident qui non aliquip.",
-    "price": 30
+    "price": 30.99,
+    "quantity": 10,
+    "category": "lamps",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 12,
     "name": "Recliner Chair",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209791/E-comm/Recliner_Chair.H03.2k_vabi6r.png",
     "description": "Officia cillum duis amet excepteur. Consectetur labore excepteur cupidatat esse sunt excepteur exercitation elit. In qui elit dolor proident. Dolore cupidatat et aute proident incididunt consequat. Quis cupidatat deserunt dolor sint officia incididunt dolor incididunt. Reprehenderit velit cupidatat sit cillum deserunt. Magna id ex magna consequat amet consectetur.",
-    "price": 199
+    "price": 199.99,
+    "quantity": 10,
+    "category": "chairs",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 13,
     "name": "Leather Armchair",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209791/E-comm/Leather_Armchair.H03.2k_evv8wc.png",
     "description": "Ipsum ullamco magna mollit elit ut nostrud exercitation cupidatat deserunt. Elit amet esse voluptate consequat ut sit. Deserunt esse excepteur aliqua aliquip incididunt excepteur mollit magna. Officia ullamco aliquip ex culpa esse elit excepteur. Cupidatat cillum ex aliquip ut voluptate nostrud magna nostrud velit cillum adipisicing laborum voluptate. Anim reprehenderit non non culpa quis dolore velit cupidatat quis Lorem.",
-    "price": 50
+    "price": 50.99,
+    "quantity": 10,
+    "category": "chairs",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 14,
     "name": "Office Chair",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209791/E-comm/Office_Chair.H03.2k_za8f6y.png",
     "description": "Nulla mollit eu deserunt aute sunt minim eiusmod aliqua id nisi consequat. Aliquip sint magna anim occaecat do eiusmod reprehenderit commodo nulla velit. Tempor nostrud officia fugiat eiusmod adipisicing amet irure. Commodo exercitation eu ullamco qui tempor occaecat. Non ex in fugiat commodo.",
-    "price": 20
+    "price": 20.99,
+    "quantity": 10,
+    "category": "chairs",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 15,
     "name": "Green Sofa",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209792/E-comm/Sofa_3.H03.2k_gqc3ec.png",
     "description": "Eu quis fugiat fugiat nostrud nulla cillum et. Sint enim velit do laborum voluptate esse exercitation laboris. Sunt ex minim ut pariatur sit eiusmod adipisicing officia nulla deserunt. Adipisicing eiusmod minim sit non. Nisi amet ut deserunt irure id irure pariatur Lorem amet elit cupidatat quis. Consectetur laborum consectetur sit Lorem veniam excepteur duis amet sint tempor. Nisi fugiat aute sit esse elit exercitation.",
-    "price": 349
+    "price": 349.99,
+    "quantity": 10,
+    "category": "sofas",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 16,
     "name": "Modern Chest",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209792/E-comm/Modern_Chest.H03.2k_gaasw7.png",
     "description": "Et occaecat deserunt dolor anim cillum mollit adipisicing sit exercitation ipsum commodo culpa irure sint. Eiusmod consequat sunt officia eiusmod qui in id laboris. Amet minim id sint aliquip pariatur laboris elit ullamco proident non anim commodo consequat. Adipisicing qui ex sint exercitation dolor consectetur laboris aliquip aute officia sunt reprehenderit est sint. Sint reprehenderit elit mollit esse. Laboris ad labore reprehenderit laboris consequat et. Minim nostrud consectetur mollit quis voluptate.",
-    "price": 179
+    "price": 179.99,
+    "quantity": 10,
+    "category": "chests",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 17,
     "name": "Small Sofa",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209792/E-comm/Sofa.H03.2k_xtucsr.png",
     "description": "Anim exercitation exercitation magna velit occaecat. Eiusmod aliqua aliquip incididunt velit Lorem proident laboris enim eiusmod. Cillum excepteur ipsum ad qui adipisicing. Commodo magna irure sit Lorem minim est ullamco dolor minim eiusmod quis.",
-    "price": 219
+    "price": 219.99,
+    "quantity": 10,
+    "category": "sofas",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 18,
     "name": "Old-style Sofa",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209792/E-comm/Sofa_2.H03.2k_a6pro2.png",
     "description": "Aute nisi dolore fugiat sint dolor. Sint deserunt sit aute cillum proident magna nisi ut Lorem. Ex non quis anim consequat.",
-    "price": 200
+    "price": 200.99,
+    "quantity": 10,
+    "category": "sofas",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 19,
     "name": "Modern Table",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209792/E-comm/Table.H03.2k_kr9sic.png",
     "description": "Fugiat id incididunt occaecat consectetur ea. Magna ut duis eiusmod sit labore sit incididunt. Nulla consequat ad cupidatat excepteur cillum magna consectetur id consequat velit adipisicing. Veniam officia est ullamco ut tempor anim laborum mollit commodo.",
-    "price": 189
+    "price": 189.99,
+    "quantity": 10,
+    "category": "tables",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 20,
     "name": "Cozy Sofa",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209792/E-comm/Sofa_4.H03.2k_febcdl.png",
     "description": "Eu adipisicing quis velit labore pariatur laborum reprehenderit voluptate culpa. Magna tempor aute dolor eiusmod. Reprehenderit dolore non esse Lorem reprehenderit sit elit nulla irure ullamco nisi non velit. Magna cupidatat nisi excepteur duis fugiat incididunt esse dolore Lorem enim dolor. Aliqua in incididunt aliqua tempor proident culpa ullamco occaecat.",
-    "price": 150
+    "price": 150.99,
+    "quantity": 10,
+    "category": "sofas",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 21,
     "name": "Minimalistic Table",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209793/E-comm/Table_2.H03.2k_gqoxpy.png",
     "description": "Tempor reprehenderit culpa esse commodo magna ullamco enim aliquip consequat duis. Voluptate ex adipisicing cupidatat consectetur magna. Commodo quis voluptate incididunt elit sunt officia. Dolore reprehenderit cupidatat nostrud ex non adipisicing. Veniam sint id pariatur Lorem dolor pariatur culpa irure officia duis.",
-    "price": 99
+    "price": 99.99,
+    "quantity": 10,
+    "category": "tables",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 22,
     "name": "Artistic Table",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209793/E-comm/Table_3.H03.2k_ua1x0e.png",
     "description": "Elit ex sunt elit exercitation commodo esse amet ullamco commodo in magna excepteur. Aliqua voluptate id non sit excepteur quis consequat cillum amet esse. Lorem exercitation id est velit enim eiusmod magna magna nisi. Dolore officia cillum cillum ad occaecat magna voluptate fugiat officia magna amet.",
-    "price": 499
+    "price": 499.99,
+    "quantity": 10,
+    "category": "tables",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 23,
     "name": "Old Table",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209793/E-comm/Table_4.H03.2k_kn8xmu.png",
     "description": "Eu cupidatat eu ipsum amet magna eiusmod id. Aliquip ullamco sunt qui ea ex. Ut anim nostrud consectetur dolor. Ullamco fugiat magna esse exercitation nulla aute in. Duis ad reprehenderit cupidatat anim non exercitation incididunt ut reprehenderit esse.",
-    "price": 49
+    "price": 49.99,
+    "quantity": 10,
+    "category": "tables",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   },
   {
     "id": 24,
     "name": "Even Older Table",
     "image": "https://res.cloudinary.com/voytekcloud/image/upload/v1581209793/E-comm/Table_4.H03.2k_kn8xmu.png",
     "description": "Ullamco sunt qui ea ex. Ut anim nostrud consectetur dolor. Commodo esse amet ullamco commodo in magna excepteur Ullamco fugiat magna esse exercitation nulla aute in. Duis ad reprehenderit cupidatat anim non exercitation incididunt ut reprehenderit esse.",
-    "price": 39
+    "price": 39.99,
+    "quantity": 10,
+    "category": "tables",
+    "tags": ["wood", "stone", "glass", "lightning", "kitchen", "office"]
   }
 ]

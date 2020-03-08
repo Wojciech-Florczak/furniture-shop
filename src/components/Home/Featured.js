@@ -1,8 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
 import Container from "react-bootstrap/Container";
-import ProductCard from "./ProductCard";
-import productsList from "../db.json";
+import ProductCard from "../common/ProductCard";
+import productsList from "../../db.json";
 import { createUseStyles } from "react-jss";
 
 const featuredList = productsList.slice(0, 12);

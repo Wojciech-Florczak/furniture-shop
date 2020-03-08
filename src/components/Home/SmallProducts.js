@@ -2,9 +2,9 @@ import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import ProductSmall from "./ProductSmall";
-import productsList from "../db.json";
-import shuffleArray from "../helpers/shuffle";
+import ProductSmall from "../common/ProductSmall";
+import productsList from "../../db.json";
+import shuffleArray from "../../helpers/shuffle";
 
 export default function SmallProducts() {
   const newProducts = shuffleArray(productsList)
