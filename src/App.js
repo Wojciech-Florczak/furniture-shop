@@ -8,23 +8,26 @@ import ScrollToTop from "./components/Layout/ScrollToTop";
 import ProductAll from "./pages/ProductAll";
 import About from "./pages/About";
 import { ProductsProvider } from "./contexts/products.context";
+import { CartProvider } from "./contexts/cart.context";
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Navigation />
-      <Switch>
-        <Route exact path="/" render={() => <Home />} />
-        <Route path="/about" render={() => <About />} />
-        <ProductsProvider>
-          <Route exact path="/product" render={() => <ProductAll />} />
-          <Route
-            path="/product/:id"
-            render={routeProps => <ProductShow {...routeProps} />}
-          ></Route>
-        </ProductsProvider>
-      </Switch>
+      <CartProvider>
+        <Navigation />
+        <Switch>
+          <Route exact path="/" render={() => <Home />} />
+          <Route path="/about" render={() => <About />} />
+          <ProductsProvider>
+            <Route exact path="/product" render={() => <ProductAll />} />
+            <Route
+              path="/product/:id"
+              render={routeProps => <ProductShow {...routeProps} />}
+            ></Route>
+          </ProductsProvider>
+        </Switch>
+      </CartProvider>
       <Footer />
     </Router>
   );

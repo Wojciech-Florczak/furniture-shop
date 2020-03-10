@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Modal, Button } from "react-bootstrap";
 import productsList from "../../db.json";
-import ProductSmall from "../common/ProductSmall"
-export default function ShoppingCart(props) {
+import ProductSmall from "../common/ProductSmall";
+import { CartContext, DispatchContext } from "../../contexts/cart.context.js";
 
+export default function ShoppingCart(props) {
+  const cart = useContext(CartContext);
+  const dispatch = useContext(DispatchContext);
+
+  const totalToPay = cart.products
+    .map(product => product.price * product.qty)
+    .reduce((acc, currVal) => {
+      return acc + currVal;
+    }, 0);
+
+  console.log(cart);
   return (
     <>
       <Modal
@@ -13,10 +24,10 @@ export default function ShoppingCart(props) {
         animation={false}
       >
         <Modal.Body>
-          <ProductSmall data={productsList[0]} />
-          <ProductSmall data={productsList[5]} />
-          <ProductSmall data={productsList[7]} />
-          <h4>Total to pay: $420</h4>
+          {cart.products.map(product => {
+            return <ProductSmall data={product} key={product.id} />;
+          })}
+          <h4>Total to pay: ${totalToPay}</h4>
         </Modal.Body>
         <Modal.Footer>
           <Button>View Cart</Button>

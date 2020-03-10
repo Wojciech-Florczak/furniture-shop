@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Container, Row, Col, DropdownButton, Dropdown } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import productsList from "../db.json";
 import ProductCard from "../components/common/ProductCard";
 import ProductSmall from "../components/common/ProductSmall";
@@ -11,6 +11,8 @@ import {
   ProductsContext,
   DispatchContext
 } from "../contexts/products.context.js";
+import QuantityToShow from "../components/ProductAll/QuantityToShow.js";
+import PriceRange from "../components/ProductAll/PriceRange.js";
 const useStyles = createUseStyles({
   list: {
     listStyle: "none",
@@ -51,74 +53,21 @@ export default function ProductAll() {
     });
   }
   filterProducts();
-  const pages = paginate(productsToDisplay.length, filters.currentPage, filters.quantity);
+
+  const pages = paginate(
+    productsToDisplay.length, // Number of items
+    filters.currentPage,  // Current page
+    filters.quantity //Number of items per page
+  );
+  
   return (
     <Container>
       <Row>
         <Col md={3}>
           <div>
             <h3>Filter</h3>
-            <div className={classes.priceFilter}>
-              <h4>Filter by Price</h4>
-              <input
-                type="number"
-                min={1}
-                max={filters.max}
-                placeholder={filters.min}
-                onChange={e =>
-                  dispatch({
-                    type: "minPrice",
-                    payload: parseInt(e.target.value)
-                  })
-                }
-              />
-              <input
-                type="number"
-                min={1}
-                placeholder={filters.max}
-                onChange={e =>
-                  dispatch({
-                    type: "maxPrice",
-                    payload: parseInt(e.target.value)
-                  })
-                }
-              />
-            </div>
-            <div>
-              <h3>Show</h3>
-              <DropdownButton title={filters.quantity}>
-                <Dropdown.Item
-                  onClick={e =>
-                    dispatch({
-                      type: "quantity",
-                      payload: parseInt(e.target.text)
-                    })
-                  }
-                >
-                  5
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={e =>
-                    dispatch({
-                      type: "quantity",
-                      payload: parseInt(e.target.text)
-                    })
-                  }
-                >
-                  10
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={e =>
-                    dispatch({
-                      type: "quantity",
-                      payload: parseInt(e.target.text)
-                    })
-                  }
-                >
-                  20
-                </Dropdown.Item>
-              </DropdownButton>
-            </div>
+            <PriceRange />
+            <QuantityToShow />
             <Categories productsToDisplay={productsToDisplay} />
             <div>
               <h4>Hot Sale</h4>

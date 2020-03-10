@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import Card from "react-bootstrap/Card";
 import { createUseStyles } from "react-jss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import { CartContext, DispatchContext } from "../../contexts/cart.context.js";
 
 const useStyles = createUseStyles({
   title: {
@@ -43,6 +44,9 @@ const useStyles = createUseStyles({
 });
 
 export default function ProductCard({ data }) {
+  const cart = useContext(CartContext);
+  const dispatch = useContext(DispatchContext);
+
   const { name, price, image, id } = data;
   const classes = useStyles();
   return (
@@ -55,7 +59,13 @@ export default function ProductCard({ data }) {
       <div className={classes.buttonsWrapper}>
         <button>
           <FontAwesomeIcon icon="shopping-cart" className="mr-1" />
-          <span>Add to Cart</span>
+          <span
+            onClick={() =>
+              dispatch({ type: "ADD", payload: { id, name, image, price, qty: 1 } })
+            }
+          >
+            Add to Cart
+          </span>
         </button>
         <div>
           <FontAwesomeIcon icon="heart" />
