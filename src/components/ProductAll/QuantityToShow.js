@@ -1,49 +1,28 @@
 import React, { useContext } from "react";
-import { DropdownButton, Dropdown } from "react-bootstrap";
-import {
-  ProductsContext,
-  DispatchContext
-} from "../../contexts/products.context.js";
+import Form from "react-bootstrap/Form";
+import { DispatchContext } from "../../contexts/products.context.js";
 
 export default function QuantityToShow() {
-  const filters = useContext(ProductsContext);
   const dispatch = useContext(DispatchContext);
+
+  const options = [5, 10, 20];
+  const renderOptions = options.map(option => {
+    return <option key={option}>{option}</option>;
+  });
 
   return (
     <div>
-      <h3>Show</h3>
-      <DropdownButton title={filters.quantity}>
-        <Dropdown.Item
-          onClick={e =>
-            dispatch({
-              type: "quantity",
-              payload: parseInt(e.target.text)
-            })
+      <Form.Group controlId="exampleForm.ControlSelect1">
+        <Form.Label>Show</Form.Label>
+        <Form.Control
+          as="select"
+          onChange={e =>
+            dispatch({ type: "QUANTITY", payload: e.target.value })
           }
         >
-          5
-        </Dropdown.Item>
-        <Dropdown.Item
-          onClick={e =>
-            dispatch({
-              type: "quantity",
-              payload: parseInt(e.target.text)
-            })
-          }
-        >
-          10
-        </Dropdown.Item>
-        <Dropdown.Item
-          onClick={e =>
-            dispatch({
-              type: "quantity",
-              payload: parseInt(e.target.text)
-            })
-          }
-        >
-          20
-        </Dropdown.Item>
-      </DropdownButton>
+          {renderOptions}
+        </Form.Control>
+      </Form.Group>
     </div>
   );
 }

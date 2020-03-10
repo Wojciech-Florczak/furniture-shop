@@ -9,7 +9,8 @@ const initialState = {
   max: 1000,
   category: "",
   quantity: 5,
-  currentPage: 1
+  currentPage: 1,
+  searchQuery: ''
 };
 
 export function ProductsProvider(props) {

@@ -14,7 +14,7 @@ export default function Pagination({ productsToDisplay, pages }) {
       <PaginationBs.Item
         key={num}
         active={num === active}
-        onClick={() => dispatch({ type: "pageChange", payload: num })}
+        onClick={() => dispatch({ type: "PAGE_CHANGE", payload: num })}
       >
         {num}
       </PaginationBs.Item>

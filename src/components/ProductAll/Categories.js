@@ -30,7 +30,7 @@ export default function Categories({ productsToDisplay }) {
         style={{ textTransform: "capitalize" }}
         active={isActive}
         key={category[0]}
-        onClick={() => dispatch({ type: "category", payload: category[0] })}
+        onClick={() => dispatch({ type: "CATEGORY", payload: category[0] })}
       >
         {category[0]} ({category[1]})
       </ListGroup.Item>

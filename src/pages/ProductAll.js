@@ -7,12 +7,10 @@ import { createUseStyles } from "react-jss";
 import Categories from "../components/ProductAll/Categories";
 import paginate from "../helpers/paginate";
 import Pagination from "../components/ProductAll/Pagination";
-import {
-  ProductsContext,
-  DispatchContext
-} from "../contexts/products.context.js";
+import { ProductsContext } from "../contexts/products.context.js";
 import QuantityToShow from "../components/ProductAll/QuantityToShow.js";
 import PriceRange from "../components/ProductAll/PriceRange.js";
+import SearchBox from "../components/ProductAll/SearchBox";
 const useStyles = createUseStyles({
   list: {
     listStyle: "none",
@@ -35,7 +33,6 @@ const useStyles = createUseStyles({
 
 export default function ProductAll() {
   const filters = useContext(ProductsContext);
-  const dispatch = useContext(DispatchContext);
   const classes = useStyles();
   let productsToDisplay = productsList;
 
@@ -48,7 +45,9 @@ export default function ProductAll() {
         // selected category
         (filters.category.length > 0
           ? product.category === filters.category
-          : product)
+          : product) &&
+        // search query
+        product.name.toLowerCase().includes(filters.searchQuery)
       );
     });
   }
@@ -56,16 +55,27 @@ export default function ProductAll() {
 
   const pages = paginate(
     productsToDisplay.length, // Number of items
-    filters.currentPage,  // Current page
+    filters.currentPage, // Current page
     filters.quantity //Number of items per page
   );
-  
+
+  const renderProducts = productsToDisplay
+    .slice(pages.startIndex, pages.endIndex + 1)
+    .map(product => {
+      return (
+        <li key={product.id} className={classes.listItem}>
+          <ProductCard data={product} />
+        </li>
+      );
+    });
+
   return (
     <Container>
       <Row>
         <Col md={3}>
           <div>
             <h3>Filter</h3>
+            <SearchBox />
             <PriceRange />
             <QuantityToShow />
             <Categories productsToDisplay={productsToDisplay} />
@@ -79,17 +89,7 @@ export default function ProductAll() {
         </Col>
         <Col md={9}>
           <Pagination productsToDisplay={productsToDisplay} pages={pages} />
-          <ul className={classes.list}>
-            {productsToDisplay
-              .slice(pages.startIndex, pages.endIndex + 1)
-              .map(product => {
-                return (
-                  <li key={product.id} className={classes.listItem}>
-                    <ProductCard data={product} />
-                  </li>
-                );
-              })}
-          </ul>
+          <ul className={classes.list}>{renderProducts}</ul>
         </Col>
       </Row>
     </Container>
