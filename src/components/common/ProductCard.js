@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import { createUseStyles } from "react-jss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import { CartContext, DispatchContext } from "../../contexts/cart.context.js";
+import { DispatchContext } from "../../contexts/cart.context.js";
 
 const useStyles = createUseStyles({
   title: {
@@ -44,7 +44,6 @@ const useStyles = createUseStyles({
 });
 
 export default function ProductCard({ data }) {
-  const cart = useContext(CartContext);
   const dispatch = useContext(DispatchContext);
 
   const { name, price, image, id } = data;

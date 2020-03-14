@@ -1,22 +1,24 @@
 import React, { useContext } from "react";
 import { Modal, Button } from "react-bootstrap";
-import productsList from "../../db.json";
 import ProductSmall from "../common/ProductSmall";
-import { CartContext, DispatchContext } from "../../contexts/cart.context.js";
+import { CartContext } from "../../contexts/cart.context.js";
+import BadgeCounter from "../common/BadgeCounter";
 
 export default function ShoppingCart(props) {
   const cart = useContext(CartContext);
-  const dispatch = useContext(DispatchContext);
 
   const totalToPay = cart.products
     .map(product => product.price * product.qty)
     .reduce((acc, currVal) => {
-      return acc + currVal;
+      return parseFloat((acc + currVal).toFixed(10));
     }, 0);
 
-  console.log(cart);
+  const countProducts = cart.products.reduce((acc, currVal) => {
+    return acc + currVal.qty;
+  }, 0);
   return (
     <>
+      <BadgeCounter num={countProducts} />
       <Modal
         {...props}
         dialogClassName="mr-5 mt-5"

@@ -22,12 +22,6 @@ const useStyles = createUseStyles({
   listItem: {
     flexBasis: "33%",
     padding: 10
-  },
-  priceFilter: {
-    "& input": {
-      maxWidth: 60,
-      marginRight: 10
-    }
   }
 });
 
