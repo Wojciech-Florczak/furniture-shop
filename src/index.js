@@ -5,52 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { library } from "@fortawesome/fontawesome-svg-core";
-// Icons config
-import {
-  faSearch,
-  faHeart,
-  faShoppingCart,
-  faMapMarkerAlt,
-  faPhone,
-  faEnvelope,
-  faExternalLinkAlt,
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faCcVisa,
-  faCcAmazonPay,
-  faCcPaypal,
-  faCcMastercard,
-  faCcApplePay,
-  faTwitter,
-  faFacebook,
-  faGooglePlus,
-  faYoutube,
-  faLinkedinIn,
-  faWhatsapp
-} from "@fortawesome/free-brands-svg-icons";
-
-library.add(
-  faSearch,
-  faExternalLinkAlt,
-  faHeart,
-  faShoppingCart,
-  faMapMarkerAlt,
-  faPhone,
-  faEnvelope,
-  faCcVisa,
-  faCcAmazonPay,
-  faCcPaypal,
-  faCcMastercard,
-  faCcApplePay,
-  faTwitter,
-  faFacebook,
-  faGooglePlus,
-  faYoutube,
-  faLinkedinIn,
-  faWhatsapp
-);
-
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

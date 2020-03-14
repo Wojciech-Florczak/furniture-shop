@@ -1,14 +1,15 @@
 import React from "react";
-import Navigation from "./components/Layout/Navigation";
-import Footer from "./components/Layout/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import ProductShow from "./pages/ProductShow";
-import ScrollToTop from "./components/Layout/ScrollToTop";
-import ProductAll from "./pages/ProductAll";
-import About from "./pages/About";
 import { ProductsProvider } from "./contexts/products.context";
 import { CartProvider } from "./contexts/cart.context";
+import "./iconsConfig";
+import Home from "./pages/Home/";
+import ProductShow from "./pages/ProductShow/";
+import ProductsAll from "./pages/ProductsAll/";
+import About from "./pages/About/";
+import Navigation from "./components/Layout/Navigation/";
+import Footer from "./components/Layout/Footer/";
+import ScrollToTop from "./components/Layout/ScrollToTop/";
 
 function App() {
   return (
@@ -20,9 +21,9 @@ function App() {
           <Route exact path="/" render={() => <Home />} />
           <Route path="/about" render={() => <About />} />
           <ProductsProvider>
-            <Route exact path="/product" render={() => <ProductAll />} />
+            <Route exact path="/products" render={() => <ProductsAll />} />
             <Route
-              path="/product/:id"
+              path="/products/:id"
               render={routeProps => <ProductShow {...routeProps} />}
             ></Route>
           </ProductsProvider>
