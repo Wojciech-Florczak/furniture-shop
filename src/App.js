@@ -7,6 +7,7 @@ import Home from "./pages/Home/";
 import ProductShow from "./pages/ProductShow/";
 import ProductsAll from "./pages/ProductsAll/";
 import About from "./pages/About/";
+import Contact from "./pages/Contact/";
 import Navigation from "./components/Layout/Navigation/";
 import Footer from "./components/Layout/Footer/";
 import ScrollToTop from "./components/Layout/ScrollToTop/";
@@ -20,6 +21,7 @@ function App() {
         <Switch>
           <Route exact path="/" render={() => <Home />} />
           <Route path="/about" render={() => <About />} />
+          <Route path="/contact" render={() => <Contact />} />
           <ProductsProvider>
             <Route exact path="/products" render={() => <ProductsAll />} />
             <Route

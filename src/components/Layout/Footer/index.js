@@ -19,9 +19,9 @@ export default function Footer() {
           <ul className={classes.socialList}>
             {socialMediaList.map(site => {
               return (
-                <li>
+                <li key={site}>
                   <a href="#home">
-                    <FontAwesomeIcon icon={["fab", site]} />
+                    <FontAwesomeIcon icon={["fab", site]}/>
                   </a>
                 </li>
               );
@@ -98,6 +98,7 @@ export default function Footer() {
           {paymentProcessorsList.map(name => {
             return (
               <FontAwesomeIcon
+              key={name}
                 className={classes.ccIcons}
                 size="2x"
                 icon={["fab", name]}
