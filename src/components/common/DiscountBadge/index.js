@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { useStyles } from "./styles";
 
 export default function DiscountBadge(props) {
@@ -8,6 +9,12 @@ export default function DiscountBadge(props) {
       <span>-{props.value}%</span>
     </div>
   );
+}
+
+DiscountBadge.propTypes = {
+  value: PropTypes.number,
+  color: PropTypes.string,
+  background: PropTypes.string
 }
 
 DiscountBadge.defaultProps = {

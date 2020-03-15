@@ -1,8 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
+import PropTypes from "prop-types";
 import Image from "react-bootstrap/Image";
 import { useStyles } from "./styles";
 import { sliderSettings } from "./config";
+
 
 export default function SimpleSlider(props) {
   const classes = useStyles();
@@ -24,3 +26,7 @@ export default function SimpleSlider(props) {
     </Slider>
   );
 }
+
+SimpleSlider.propTypes = {
+  config: PropTypes.array
+};

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../../contexts/cart.context.js";
+import PropTypes from "prop-types";
 import ProductSmall from "../../common/ProductSmall/";
 import BadgeCounter from "../../common/BadgeCounter";
 import { Modal, Button } from "react-bootstrap";
@@ -16,6 +17,7 @@ export default function ShoppingCart(props) {
   const countProducts = cart.products.reduce((acc, currVal) => {
     return acc + currVal.qty;
   }, 0);
+
   return (
     <>
       <BadgeCounter num={countProducts} />
@@ -39,3 +41,8 @@ export default function ShoppingCart(props) {
     </>
   );
 }
+
+ShoppingCart.propTypes = {
+  show: PropTypes.bool,
+  onHide: PropTypes.func
+};

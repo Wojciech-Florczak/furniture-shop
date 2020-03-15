@@ -3,6 +3,7 @@ import {
   DispatchContext,
   ProductsContext
 } from "../../../contexts/products.context.js";
+import PropTypes from "prop-types";
 import ListGroup from "react-bootstrap/ListGroup";
 import getCategories from "../../../helpers/getCategories";
 import productsList from "../../../db.json";
@@ -45,3 +46,7 @@ export default function Categories({ productsToDisplay }) {
     </div>
   );
 }
+
+Categories.propTypes = {
+  productsToDisplay: PropTypes.array
+};

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { DispatchContext } from "../../../contexts/cart.context.js";
+import PropTypes from "prop-types";
 import Card from "react-bootstrap/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useStyles } from "./styles";
@@ -43,3 +44,10 @@ export default function ProductCard({ data }) {
     </Card>
   );
 }
+
+ProductCard.propTypes = {
+  name: PropTypes.string,
+  price: PropTypes.number,
+  image: PropTypes.string,
+  id: PropTypes.number
+};

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { DispatchContext } from "../../../contexts/products.context.js";
+import PropTypes from "prop-types";
 import PaginationBs from "react-bootstrap/Pagination";
 
 export default function Pagination({ productsToDisplay, pages }) {
@@ -36,3 +37,8 @@ export default function Pagination({ productsToDisplay, pages }) {
     </div>
   );
 }
+
+Pagination.propTypes = {
+  productsToDisplay: PropTypes.array,
+  pages: PropTypes.object
+};

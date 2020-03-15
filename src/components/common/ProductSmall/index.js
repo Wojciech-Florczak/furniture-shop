@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Media from "react-bootstrap/Media";
 
 export default function ProductSmall({ data }) {
@@ -15,8 +16,15 @@ export default function ProductSmall({ data }) {
       <Media.Body>
         <h5>{name}</h5>
         <span>${price}</span>
-        <span> QTY: {qty || "?"}</span>
+        {qty && <span>QTY: qty</span>}
       </Media.Body>
     </Media>
   );
 }
+
+ProductSmall.propTypes = {
+  name: PropTypes.string,
+  price: PropTypes.number,
+  image: PropTypes.string,
+  qty: PropTypes.number
+};

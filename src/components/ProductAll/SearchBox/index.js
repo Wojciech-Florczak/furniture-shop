@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { DispatchContext } from "../../../contexts/products.context.js";
+import PropTypes from "prop-types";
 import Form from "react-bootstrap/Form";
 import { useStyles } from "./styles";
 
@@ -33,3 +34,8 @@ export default function SearchBox({ navbar, setShowSearchBox }) {
     </>
   );
 }
+
+SearchBox.propTypes = {
+  navbar: PropTypes.bool,
+  setShowSearchBox: PropTypes.func
+};

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Row, Col, Container, Badge, Image } from "react-bootstrap";
 import productsList from "../../db.json";
 
@@ -55,3 +56,7 @@ export default function ProductShow({ match }) {
     </Container>
   );
 }
+
+ProductShow.propTypes = {
+  match: PropTypes.object
+};
