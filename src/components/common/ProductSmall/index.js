@@ -16,7 +16,7 @@ export default function ProductSmall({ data }) {
       <Media.Body>
         <h5>{name}</h5>
         <span>${price}</span>
-        {qty && <span>QTY: qty</span>}
+        {qty && <span> QTY: {qty}</span>}
       </Media.Body>
     </Media>
   );

@@ -5,8 +5,8 @@ import ShoppingCart from "../ShoppingCart/";
 import { Navbar, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useStyles } from "./styles";
+import { navLinks } from "./config";
 
-//TODO Think of a way to DRY  it (nav links)
 export default function Navigation() {
   const [showCart, setShowCart] = useState(false);
   const [showSearchBox, setShowSearchBox] = useState(false);
@@ -30,26 +30,15 @@ export default function Navigation() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
         <Nav>
-          <Nav.Item>
-            <NavLink className="nav-link" exact to="/">
-              Home
-            </NavLink>
-          </Nav.Item>
-          <Nav.Item>
-            <NavLink className="nav-link" exact to="/products">
-              Products
-            </NavLink>
-          </Nav.Item>
-          <Nav.Item>
-            <NavLink className="nav-link" to="/about">
-              About
-            </NavLink>
-          </Nav.Item>
-          <Nav.Item>
-            <NavLink className="nav-link" to="/contact">
-              Contact
-            </NavLink>
-          </Nav.Item>
+          {navLinks.map(item => {
+            return (
+              <Nav.Item key={item.name}>
+                <NavLink className="nav-link" exact={item.exact} to={item.path}>
+                  {item.name}
+                </NavLink>
+              </Nav.Item>
+            );
+          })}
           <Nav.Item className={classes.iconWrapper}>{search}</Nav.Item>
           <Nav.Item className={classes.iconWrapper}>
             <FontAwesomeIcon icon="heart" className={classes.icon} />

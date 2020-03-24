@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CartContext } from "../../../contexts/cart.context.js";
+import { CartContext } from "../../../contexts/cart.context";
 import PropTypes from "prop-types";
 import ProductSmall from "../../common/ProductSmall/";
 import BadgeCounter from "../../common/BadgeCounter";
