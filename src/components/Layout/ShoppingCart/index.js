@@ -31,7 +31,7 @@ export default function ShoppingCart(props) {
           {cart.products.map(product => {
             return <ProductSmall data={product} key={product.id} />;
           })}
-          <h4>Total to pay: ${totalToPay}</h4>
+          <h4>Total to pay: ${totalToPay.toFixed(2)}</h4>
         </Modal.Body>
         <Modal.Footer>
           <Button>View Cart</Button>

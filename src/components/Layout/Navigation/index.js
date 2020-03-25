@@ -10,6 +10,7 @@ import { navLinks } from "./config";
 export default function Navigation() {
   const [showCart, setShowCart] = useState(false);
   const [showSearchBox, setShowSearchBox] = useState(false);
+  const [expanded, setExpanded] = useState(false);
   const classes = useStyles();
 
   const search = showSearchBox ? (
@@ -23,16 +24,19 @@ export default function Navigation() {
   );
 
   return (
-    <Navbar bg="light" expand="lg" sticky="top">
+    <Navbar bg="light" expand="lg" sticky="top" expanded={expanded}>
       <Link className="navbar-brand" to="/">
         Furnitu.re
       </Link>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle
+        aria-controls="basic-navbar-nav"
+        onClick={() => setExpanded(!expanded)}
+      />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
         <Nav>
           {navLinks.map(item => {
             return (
-              <Nav.Item key={item.name}>
+              <Nav.Item key={item.name} onClick={() => setExpanded(false)}>
                 <NavLink className="nav-link" exact={item.exact} to={item.path}>
                   {item.name}
                 </NavLink>
