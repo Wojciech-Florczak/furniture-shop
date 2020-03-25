@@ -1,23 +1,36 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { DispatchContext } from "../../../contexts/cart.context";
+import { DispatchContext, CartContext } from "../../../contexts/cart.context";
 import PropTypes from "prop-types";
-import AddToCart from "./AddToCart";
+import AddToCart from "../AddToCart";
 import Card from "react-bootstrap/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useStyles } from "./styles";
 
 export default function ProductCard({ data }) {
   const dispatch = useContext(DispatchContext);
+  const cart = useContext(CartContext);
   const [show, setShow] = useState(false);
   const classes = useStyles();
-  const { name, price, image, id } = data;
+
+  const { name, price, image, id, quantity } = data;
+  const productInCart = cart.products.find(product => product.id === id);
 
   const handleAdd = () => {
-    dispatch({
-      type: "ADD",
-      payload: { id, name, image, price, qty: 1 }
-    });
+    if (productInCart?.qty === quantity) return;
+
+    if (productInCart) {
+      dispatch({
+        type: "UPDATE_QTY",
+        payload: { qty: 1, id }
+      });
+    } else {
+      dispatch({
+        type: "ADD",
+        payload: { id, name, image, price, qty: 1 }
+      });
+    }
+
     setShow(true);
   };
 

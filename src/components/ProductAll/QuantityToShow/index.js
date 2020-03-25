@@ -12,7 +12,7 @@ export default function QuantityToShow() {
 
   return (
     <div>
-      <Form.Group controlId="exampleForm.ControlSelect1">
+      <Form.Group controlId="quantitySelectForm">
         <Form.Label>Show</Form.Label>
         <Form.Control
           as="select"

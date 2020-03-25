@@ -1,23 +1,16 @@
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD":
-      if (
-        state.products.filter(prod => prod.id === action.payload.id).length > 0
-      ) {
-        return {
-          ...state,
-          products: state.products.map(product => {
-            if (product.id === action.payload.id) {
-              product.qty++;
-              return product;
-            } else {
-              return product
-            }
-          })
-        };
-      } else {
-        return { ...state, products: [...state.products, action.payload] };
-      }
+      return { ...state, products: [...state.products, action.payload] };
+    case "UPDATE_QTY":
+      return {
+        ...state,
+        products: state.products.map(product =>
+          product.id === action.payload.id
+            ? { ...product, qty: (product.qty += action.payload.qty) }
+            : product
+        )
+      };
     default:
       throw new Error();
   }

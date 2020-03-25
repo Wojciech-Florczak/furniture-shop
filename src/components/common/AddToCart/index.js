@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Modal } from "react-bootstrap";
-import ProductSmall from "../../ProductSmall";
+import ProductSmall from "../ProductSmall";
 
 export default function AddToCart({ handleClose, show, data }) {
   return (
