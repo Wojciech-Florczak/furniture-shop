@@ -7,6 +7,8 @@ import {
   faPhone,
   faEnvelope,
   faExternalLinkAlt,
+  faStar,
+  faStarHalf
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faCcVisa,
@@ -30,6 +32,8 @@ library.add(
   faMapMarkerAlt,
   faPhone,
   faEnvelope,
+  faStar,
+  faStarHalf,
   faCcVisa,
   faCcAmazonPay,
   faCcPaypal,
