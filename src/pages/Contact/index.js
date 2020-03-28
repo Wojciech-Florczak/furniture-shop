@@ -1,18 +1,25 @@
 import React from "react";
-// import { useStyles } from "./styles";
 import Map from "../../components/Contact/Map";
 import Information from "../../components/Contact/Information";
 import Data from "../../components/Contact/Data";
 import Form from "../../components/Contact/Form";
-export default function Contact() {
-  // const classes = useStyles();
+import Section from "../../components/Layout/Section";
 
+export default function Contact() {
   return (
     <div>
-      <Map />
-      <Information />
-      <Data />
-      <Form />
+      <Section>
+        <Map />
+      </Section>
+      <Section className="mt-5 mb-5">
+        <Information />
+      </Section>
+      <Section className="mt-5 mb-5" bg>
+        <Data />
+      </Section>
+      <Section className="mt-5 mb-5">
+        <Form />
+      </Section>
     </div>
   );
 }

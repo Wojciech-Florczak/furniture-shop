@@ -9,7 +9,6 @@ export default function SocialMedia() {
   return (
     <>
       <h3>Find us on Social Media</h3>
-
       <ul className={classes.socialList}>
         {icons.map(icon => {
           return (

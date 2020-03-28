@@ -8,7 +8,19 @@ const useStyles = createUseStyles({
   }
 });
 
-export default function Section({ bg, children }) {
+export default function Section({ bg, children, className }) {
   const classes = useStyles();
-  return <section className={bg && classes.section}>{children}</section>;
+  const styled = className || bg;
+
+  return (
+    <section
+      className={
+        styled
+          ? `${bg ? `${classes.section} ` : ""}${className ? className : ""}`
+          : ""
+      }
+    >
+      {children}
+    </section>
+  );
 }
