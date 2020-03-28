@@ -1,38 +1,60 @@
 import { createUseStyles } from "react-jss";
+import { colors } from "../../../stylingTheme";
+
+const { lisbonBrown, bone, platinum, tobbaco } = colors;
 export const useStyles = createUseStyles({
-  title: {
+  addToCart: {
+    flex: "initial!important"
+  },
+  button: {
+    flex: 1,
+    borderRadius: 0,
+    border: 0,
+    backgroundColor: bone,
+    color: tobbaco,
+    fontWeight: "bold"
+  },
+  buttonsWrapper: {
+    backgroundColor: bone,
+    borderTop: "1px solid #DFDFDF",
+    display: "flex",
     fontSize: "1rem",
-    color: "gray",
-    textAlign: "center",
-    marginBottom: 0
+    opacity: 1,
+    width: "100%",
+    "& div": {
+      "&:not(:last-child)": {
+        borderRight: "1px solid #DFDFDF"
+      },
+      alignItems: "center",
+      display: "flex",
+      flex: "1 auto",
+      justifyContent: "center"
+    },
+    "& svg": {
+      color: lisbonBrown
+    }
+  },
+  card: {
+    height: "100%",
+    backgroundColor: platinum
+  },
+  heart: {
+    "& svg": {
+      // color: platinum,
+      // "&:hover": {
+        color: "#a83f39"
+      // }
+    }
   },
   price: {
     fontSize: "1.2rem",
     fontWeight: "bold",
     textAlign: "center"
   },
-  buttonsWrapper: {
-    opacity: 1,
-    width: "100%",
-    height: 40,
-    display: "flex",
-    alignItems: "center",
-    backgroundColor: "#EAEBED",
-    borderTop: "1px solid #DFDFDF",
-    "& div": {
-      display: "flex",
-      flex: "1 auto",
-      padding: ".25rem",
-      height: "100%",
-      justifyContent: "center",
-      alignItems: "center",
-      "&:not(:last-child)": {
-        borderRight: "1px solid #DFDFDF"
-      },
-      "& span": {
-        fontSize: "0.75rem"
-      }
-    },
-    fontSize: "1rem"
+  title: {
+    color: lisbonBrown,
+    fontSize: "1.2rem",
+    marginBottom: 0,
+    textAlign: "center"
   }
 });
