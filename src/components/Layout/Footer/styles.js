@@ -1,31 +1,46 @@
 import { createUseStyles } from "react-jss";
+import { colors } from "../../../stylingTheme";
+
+const { platinum, tobbaco, lisbonBrown } = colors;
 
 export const useStyles = createUseStyles({
-  twitterList: {
-    listStyle: "none",
-    paddingLeft: 0,
-    "& li": {
-      display: "flex"
-    }
+  ccIcons: {
+    margin: ".25rem"
   },
   contactList: {
-    listStyle: "none",
-    paddingLeft: 0,
     "& li": {
       display: "flex",
       justifyContent: "flex-end"
+    },
+    listStyle: "none",
+    paddingLeft: 0
+  },
+  footer: {
+    backgroundColor: platinum,
+    "& svg": {
+      color: `${lisbonBrown}!important`
     }
   },
   socialList: {
-    listStyle: "none",
-    paddingLeft: 0,
-    display: "flex",
     "& li": {
-      marginRight: 10,
-      fontSize: "1.2rem"
-    }
+      fontSize: "1.2rem",
+      marginRight: 10
+    },
+    display: "flex",
+    listStyle: "none",
+    paddingLeft: 0
   },
-  ccIcons: {
-    margin: ".25rem"
+  tag: {
+    margin: ".2rem",
+    textTransform: "capitalize",
+    backgroundColor: tobbaco,
+    fontSize: "1rem"
+  },
+  twitterList: {
+    "& li": {
+      display: "flex"
+    },
+    listStyle: "none",
+    paddingLeft: 0
   }
 });
