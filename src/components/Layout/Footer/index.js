@@ -3,6 +3,7 @@ import { Col, Row, Container, Badge } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useStyles } from "./styles";
 import { tagsList, socialMediaList, paymentProcessorsList } from "./config";
+import Tags from "../../common/Tags";
 
 //TODO divide this components into smaller ones?
 export default function Footer() {
@@ -56,18 +57,7 @@ export default function Footer() {
           </Col>
           <Col md={6} xl={3}>
             <h5>Product Tags</h5>
-            {tagsList.map(tag => {
-              return (
-                <Badge
-                  key={tag}
-                  variant="secondary"
-                  pill
-                  className={classes.tag}
-                >
-                  {tag}
-                </Badge>
-              );
-            })}
+            <Tags tags={tagsList} />
           </Col>
           <Col md={6} xl={3}>
             <h5>Information</h5>

@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
-html, body {
+html,
+body {
   font-family: "Source Sans Pro", sans-serif;
+  scroll-behavior: smooth;
 }

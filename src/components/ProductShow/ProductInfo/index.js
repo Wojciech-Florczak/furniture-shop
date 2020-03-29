@@ -3,8 +3,10 @@ import { DispatchContext, CartContext } from "../../../contexts/cart.context";
 import AddToCart from "../../common/AddToCart";
 import { Badge, Form, InputGroup, Button } from "react-bootstrap";
 import { useStyles } from "./styles";
+import StarRating from "../../common/StarRating";
+import Tags from "../../common/Tags";
 
-export default function ProductInfo({ product }) {
+export default function ProductInfo({ product, rating }) {
   const dispatch = useContext(DispatchContext);
   const cart = useContext(CartContext);
   const [newQuantity, setNewQuantity] = useState(1);
@@ -60,8 +62,18 @@ export default function ProductInfo({ product }) {
   return (
     <div className="d-flex flex-column justify-content-around h-100">
       <div>
-        <h2>{name}</h2>
-        <h4>{category}</h4>
+        <h2 className={classes.name}>{name}</h2>
+        <h4 className={classes.category}>{category}</h4>
+        <div className={classes.rating}>
+          <StarRating num={rating[0] || 0} />
+          <span>
+            (
+            <a href="#reviews" className={classes.reviewsLink}>
+              {rating[1]} reviews
+            </a>
+            )
+          </span>
+        </div>
         <p>{description}</p>
       </div>
       <div>
@@ -88,19 +100,7 @@ export default function ProductInfo({ product }) {
         <h5>${price}</h5>
         <h5>In stock: {quantity}</h5>
         <h4>Tags</h4>
-        {tags.map(tag => {
-          return (
-            <Badge
-              key={tag}
-              variant="secondary"
-              pill
-              className="m-1 text-capitalize"
-              style={{ fontSize: "1rem" }}
-            >
-              {tag}
-            </Badge>
-          );
-        })}
+        <Tags tags={tags} />
       </div>
       <AddToCart
         show={show}

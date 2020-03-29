@@ -1,7 +1,7 @@
 import { createUseStyles } from "react-jss";
 import { colors } from "../../../stylingTheme";
 
-const { platinum, tobbaco, lisbonBrown } = colors;
+const { platinum, lisbonBrown } = colors;
 
 export const useStyles = createUseStyles({
   ccIcons: {
@@ -29,12 +29,6 @@ export const useStyles = createUseStyles({
     display: "flex",
     listStyle: "none",
     paddingLeft: 0
-  },
-  tag: {
-    margin: ".2rem",
-    textTransform: "capitalize",
-    backgroundColor: tobbaco,
-    fontSize: "1rem"
   },
   twitterList: {
     "& li": {

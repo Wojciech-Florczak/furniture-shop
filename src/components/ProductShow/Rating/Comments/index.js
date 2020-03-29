@@ -3,10 +3,10 @@ import Comment from "./Comment";
 import faker from "faker";
 import { useParams } from "react-router-dom";
 
-// import { useStyles } from "./styles";
+import { useStyles } from "./styles";
 
 export default function Comments({ getTotalRating }) {
-  // const classes = useStyles();
+  const classes = useStyles();
   const itemId = Number(useParams().id);
   const randomNum = (num, size = 5) => {
     while (num > size) {
@@ -38,10 +38,10 @@ export default function Comments({ getTotalRating }) {
   const comments = createComments(numOfComments);
   getTotalRating(comments);
   return (
-    <div>
+    <ul className={classes.comments}>
       {comments.map(comment => {
         return <Comment key={comment.id} data={comment} />;
       })}
-    </div>
+    </ul>
   );
 }
