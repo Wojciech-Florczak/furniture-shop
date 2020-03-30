@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import StarRating from "../../common/StarRating";
 import Comments from "./Comments";
 import { useStyles } from "./styles";
 

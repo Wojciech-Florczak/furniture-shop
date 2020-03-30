@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { DispatchContext, CartContext } from "../../../contexts/cart.context";
 import AddToCart from "../../common/AddToCart";
-import { Badge, Form, InputGroup, Button } from "react-bootstrap";
+import { Form, InputGroup, Button } from "react-bootstrap";
 import { useStyles } from "./styles";
 import StarRating from "../../common/StarRating";
 import Tags from "../../common/Tags";

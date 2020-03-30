@@ -9,6 +9,13 @@ export default function ImageCarousel({ image }) {
   const classes = useStyles();
   const smallScreen = window.matchMedia("(max-width: 767.98px)").matches;
 
+  function CustomArrow(props) {
+    const { className, onClick } = props;
+    return (
+      <div className={`${className} ${classes.arrow}`} onClick={onClick} />
+    );
+  }
+
   const createPlaceholders = num => {
     return Array(num).fill(
       <Image
@@ -26,7 +33,9 @@ export default function ImageCarousel({ image }) {
         asNavFor={nav2}
         ref={slider => setNav1(slider)}
         dots={smallScreen ? true : false}
-        arrows={false}
+        arrows={smallScreen ? false : true}
+        prevArrow={<CustomArrow />}
+        nextArrow={<CustomArrow />}
       >
         <Image className={classes.image} src={image} alt="product" />
         {sliders.map((slide, i) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row, Container, Badge } from "react-bootstrap";
+import { Col, Row, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useStyles } from "./styles";
 import { tagsList, socialMediaList, paymentProcessorsList } from "./config";
